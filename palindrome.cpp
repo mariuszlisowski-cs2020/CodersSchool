@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 
-bool isPalindrome(const std::string & str) {
+bool isPalindrome(std::string str) {
 	size_t i {}, j {str.size() - 1};
 	while (i < j) {
-		if (str[i++] != str[j--])
+		if (std::tolower(str[i++]) != std::tolower(str[j--]))
 			return false;
 	}
 	return true;
